@@ -1,8 +1,11 @@
 package com.example.anselcorona2.projecttest.entities;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.Date;
 
-public class User {
+public class User implements Parcelable {
 
     private String ID;
     private String Names;
@@ -90,4 +93,46 @@ public class User {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+    protected User(Parcel in) {
+        ID = in.readString();
+        Names = in.readString();
+        Surnames = in.readString();
+        long tmpBirth = in.readLong();
+        Birth = tmpBirth != -1 ? new Date(tmpBirth) : null;
+        Facebook = in.readString();
+        Instagram = in.readString();
+        Twitter = in.readString();
+        address = (Address) in.readValue(Address.class.getClassLoader());
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(ID);
+        dest.writeString(Names);
+        dest.writeString(Surnames);
+        dest.writeLong(Birth != null ? Birth.getTime() : -1L);
+        dest.writeString(Facebook);
+        dest.writeString(Instagram);
+        dest.writeString(Twitter);
+        dest.writeValue(address);
+    }
+
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 }

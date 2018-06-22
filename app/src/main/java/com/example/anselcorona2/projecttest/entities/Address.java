@@ -1,6 +1,9 @@
 package com.example.anselcorona2.projecttest.entities;
 
-public class Address {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Address implements Parcelable {
 
     private String Sector;
     private String Municipality;
@@ -45,4 +48,37 @@ public class Address {
     public void setRegion(String region) {
         Region = region;
     }
+
+    protected Address(Parcel in) {
+        Sector = in.readString();
+        Municipality = in.readString();
+        Province = in.readString();
+        Region = in.readString();
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(Sector);
+        dest.writeString(Municipality);
+        dest.writeString(Province);
+        dest.writeString(Region);
+    }
+
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<Address> CREATOR = new Parcelable.Creator<Address>() {
+        @Override
+        public Address createFromParcel(Parcel in) {
+            return new Address(in);
+        }
+
+        @Override
+        public Address[] newArray(int size) {
+            return new Address[size];
+        }
+    };
 }
