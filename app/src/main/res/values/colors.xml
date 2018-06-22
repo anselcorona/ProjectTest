@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--base colors-->
+    <color name="GoogleRed">#ea4335</color>
+    <color name="GoogleBlue">#4285f4</color>
+    <color name="GoogleGreen">#34a853</color>
+    <color name="GoogleYellow">#fbbc05</color>
+
+    <!--detail colors-->
+    <color name="DiscordWhite">#FFFFFF</color>
+    <color name="DiscordGrey">#99aab5</color>
+    <color name="DiscordDarkGrey">#2c2f33</color>
+    <color name="DiscordLightBlack">#23272a</color>
+
+    <!--<color name="PeriscopeCrimson">#d55548</color>-->
+    <!--<color name="PeriscopeLightBlue">#7cd6f1</color>-->
+    <!--<color name="PeriscopeDarkBlue">#3f4d51</color>-->
+    <!--<color name="PeriscopeGrey">#a4b8be</color>-->
+</resources>

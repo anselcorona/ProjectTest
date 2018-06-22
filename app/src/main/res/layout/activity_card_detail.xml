@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.CardDetailActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <LinearLayout
+            android:id="@+id/detail_view"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/detail_view_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                tools:text="SSS"/>
+            <TextView
+                android:id="@+id/detail_view_nivel"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                tools:text="nivel"/>
+
+            <View
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+            <TextView
+                android:id="@+id/detail_view_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="@string/lorem_ipsum"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Publicado en: "/>
+                <TextView
+                    android:id="@+id/detail_view_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@android:color/transparent"
+                />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp">
+                <LinearLayout
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="bottom"
+                        android:contentDescription="@string/profile_pic"
+                        android:id="@+id/detail_view_profile_picture"
+                        android:src="@drawable/ic_account_circle_white_54dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="55dp"
+                        android:scaleType="fitCenter"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/detail_view_author_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="Ansel Corona"
+                            android:textSize="20sp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/detail_view_label_nivel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/nivel"/>
+                            <TextView
+                                android:id="@+id/detail_view_author_nivel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="\tNacional"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>

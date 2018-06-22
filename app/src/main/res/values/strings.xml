@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Proyecto</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur est eu eros porttitor, non accumsan lacus tristique. Morbi convallis, felis sed interdum semper, est dolor laoreet est, sed pharetra libero sapien in enim. Nulla eleifend tristique dolor, ac dapibus orci pharetra eu. Nulla sapien dolor, vestibulum non bibendum porttitor, lobortis quis elit. Nam fermentum in ex vel ultrices. Aliquam in sollicitudin quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras euismod sodales neque quis dictum.</string>
+    <string name="fecha_creada">Fecha creada:</string>
+    <string name="sign"><![CDATA[>]]></string>
+    <string name="profile_pic">profile pic</string>
+    <string name="nivel">Nivel:</string>
+</resources>
